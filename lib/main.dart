@@ -17,6 +17,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
+      debugShowCheckedModeBanner: false,
       home: const MyHomePage(),
     );
   }
@@ -36,13 +37,21 @@ class _MyHomePageState extends State<MyHomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: const Text('Web view'),
-        centerTitle: true,
-      ),
+      // appBar: AppBar(
+      //   backgroundColor: Colors.white,
+      //   elevation: 0,
+      //   title: LinearProgressIndicator(
+      //     value: progress,
+      //     backgroundColor: Colors.blue,
+      //     color: Colors.blue,
+      //     valueColor: const AlwaysStoppedAnimation<Color>(Colors.white),
+      //   ),
+      // ),
       body: Column(
         children: [
-          
+          const SizedBox(
+            height: 25,
+          ),
           Expanded(
             child: InAppWebView(
               initialUrlRequest: URLRequest(
